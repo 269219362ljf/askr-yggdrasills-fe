@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {Menu, Icon, Badge} from 'antd';
+import {Menu, Icon} from 'antd';
 import {Link} from 'react-router-dom';
 
 const {SubMenu} = Menu;
@@ -21,7 +21,7 @@ const SiderMenus = ({match}) => (
                 title={<span><Icon type="switcher"/><span>测试组</span></span>}
             >
                 <Menu.Item>
-                    <Menu.Item key="/D3SimpleForceChart"><Link to="/D3SimpleForceChart">简单力导图</Link></Menu.Item>
+                    <Menu.Item key="/SimpleForceChart"><Link to="/SimpleForceChart">简单力导图</Link></Menu.Item>
                 </Menu.Item>
             </SubMenu>
 

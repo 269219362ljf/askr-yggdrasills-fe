@@ -12,7 +12,10 @@
     "d3-tip": "^0.9.1",
     "echarts": "^4.2.0-rc.1",
     "echarts-for-react": "^2.0.15-beta.0",
-    "antd": "^3.10.0"
+    "antd": "^3.10.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",

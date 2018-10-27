@@ -59,9 +59,8 @@ class SimpleForceChart extends React.Component {
                 method:'get'
             }).then(response=>{
                 let tmpres=response.json().then(value => {
-                    getdata=value;
+                    console.log("response data",value);
                 }).catch(reason => console.log(reason));
-
             });
         } catch (err) {
             console.log(err);

@@ -9,7 +9,8 @@ const SiderMenus = ({match}) => (
     <div style={{paddingBottom: '120px'}}>
         <Menu theme="dark"
               defaultSelectedKeys={[match.url]}
-              selectedKeys={[match.url]} defaultOpenKeys={['sub4']} mode="inline">
+              selectedKeys={[match.url]}
+              defaultOpenKeys={["testsub"]} mode="inline">
         <Menu.Item key="/">
                 <Link to="/">
                     <Icon type="home"/>
@@ -18,13 +19,11 @@ const SiderMenus = ({match}) => (
             </Menu.Item>
             <SubMenu
                 key={"testsub"}
-                title={<span><Icon type="switcher"/><span>测试组</span></span>}
-            >
-                <Menu.Item>
-                    <Menu.Item key="/SimpleForceChart"><Link to="/SimpleForceChart">简单力导图</Link></Menu.Item>
-                </Menu.Item>
+                title={<span><Icon type="switcher"/><span>测试组</span></span>}>
+                    <Menu.Item key="/SimpleForceChart">
+                        <Link to="/SimpleForceChart">简单力导图</Link>
+                    </Menu.Item>
             </SubMenu>
-
         </Menu>
     </div>
 );

@@ -34,7 +34,7 @@ class AppBreadcrumbRoute extends Component{
     render() {
         let breadcrumbItems=this.getBreadcrumItem(this.props.location.pathname);
         return (
-            <Breadcrumb separator={">"}>
+            <Breadcrumb separator={">"} className={'appbreadcrumb'} >
                 {breadcrumbItems}
             </Breadcrumb>
         );

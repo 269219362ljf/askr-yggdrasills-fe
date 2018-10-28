@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware,compose} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import {Layout,Breadcrumb} from 'antd';
+import {Layout} from 'antd';
 import RootHeader from './components/layout/RootHeader';
 import {ContentRoute, SiderMenusRoute} from './routes';
 import reducers from './reducers';
@@ -10,16 +10,7 @@ import './App.css';
 import AppBreadcrumbRoute from "./components/layout/AppBreadcrumbRoute";
 
 
-const {Content, Sider} = Layout;
-
-// const createStoreWithMiddleware = applyMiddleware(
-//     thunkMiddleware,
-//     loggerMiddleware
-// )(createStore);
-
-// export  function configureStore(initialState) {
-//     return createStoreWithMiddleware(rootReducer, initialState);
-// }
+const {Content, Sider,Footer} = Layout;
 
 function configureStore(initialState) {
     const store = applyMiddleware(thunkMiddleware)(createStore)(reducers,initialState);
@@ -70,6 +61,9 @@ class App extends Component {
                             </Content>
                         </Layout>
                     </Layout>
+                    <Footer style={{ textAlign: 'center' }}>
+                        prsonalWebSite ©2018 Created by lu
+                    </Footer>
                 </Layout>
             </Provider>
         );

@@ -187,7 +187,7 @@ small {
 
 .ant-layout-sider-children {
   height: 100%;
-  overflow-y:auto; 
+  overflow-y:auto;
 }
 .ant-layout-sider-collapsed .ant-layout-sider-children{
   overflow-y:visible;
@@ -216,4 +216,9 @@ small {
 .ant-menu-dark .ant-menu-item .ant-badge :hover > a, .ant-menu-dark .ant-menu-item-active .ant-badge > a, .ant-menu-dark .ant-menu-submenu-active .ant-badge > a, .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open .ant-badge > a, .ant-menu-dark .ant-menu-submenu-selected .ant-badge > a, .ant-menu-dark .ant-menu-submenu-title:hover .ant-badge > a {
     color: #fff;
     text-decoration: none;
+}
+
+.appbreadcrumb{
+    margin: 10px;
+
 }

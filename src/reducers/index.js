@@ -1,4 +1,5 @@
 import {SimpleForceChartDataReducer} from '../containers/SimpleForceChart';
+import {todoItemCardReducer} from '../components/common/TodoItemCard';
 
 import {combineReducers} from "redux";
 
@@ -7,7 +8,8 @@ import {combineReducers} from "redux";
 // 所有的reducer都会收到发出的action，进行处理后，对对应的state进行更新
 // 在更新后，react组件会检查store并进行界面的更新
 const reducers=combineReducers({
-    sysForceData:SimpleForceChartDataReducer
+    sysForceData:SimpleForceChartDataReducer,
+    todoItemData:todoItemCardReducer
 });
 
 export default reducers;

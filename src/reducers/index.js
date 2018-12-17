@@ -1,5 +1,5 @@
 import {SimpleForceChartDataReducer} from '../containers/SimpleForceChart';
-import {todoItemCardReducer} from '../components/common/TodoItemCard';
+import {todoItemCardReducer} from '../components/home/TodoItemCard';
 
 import {combineReducers} from "redux";
 

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Menu, Icon} from 'antd';
 import {Link} from 'react-router-dom';
+
 const {SubMenu} = Menu;
 
 const SiderMenus = ({match}) => (
@@ -10,7 +11,7 @@ const SiderMenus = ({match}) => (
               defaultSelectedKeys={[match.url]}
               selectedKeys={[match.url]}
               defaultOpenKeys={["testsub"]} mode="inline">
-        <Menu.Item key="/">
+            <Menu.Item key="/">
                 <Link to="/">
                     <span className="iconfont icon-shouye">首页</span>
                 </Link>
@@ -18,9 +19,17 @@ const SiderMenus = ({match}) => (
             <SubMenu
                 key={"testsub"}
                 title={<span className="iconfont icon-tongji">测试组</span>}>
-                    <Menu.Item key="/SimpleForceChart">
-                        <Link to="/SimpleForceChart">简单力导图</Link>
-                    </Menu.Item>
+                <Menu.Item key="/SimpleForceChart">
+                    <Link to="/SimpleForceChart">简单力导图</Link>
+                </Menu.Item>
+            </SubMenu>
+            <SubMenu
+                key={"toolsub"}
+                title={<span className="iconfont icon-xiyiji">在线工具</span>}>
+            <Menu.Item>
+                <Link to="/">在线工具测试</Link>
+            </Menu.Item>
+
             </SubMenu>
         </Menu>
     </div>

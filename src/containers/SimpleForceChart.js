@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Card} from 'antd';
 import {connect} from 'react-redux';
 import {LOADSYSFORCEDATA,loadSysForceData} from '../actions'
-import D3SimpleForceChart from '../components/charts/D3SimpleForceChart';
+import D3SimpleForceChart from '../components/simpleForceChart/D3SimpleForceChart';
 import D3SimpleForceData from '../testdata/D3SimpleForceData';
 
 //reducer接收自己对应的state和群发的action，根据action的内容对state进行更新

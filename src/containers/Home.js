@@ -1,6 +1,6 @@
 import React from 'react';
 import {Row,Col,Card,Icon,Timeline,Calendar} from "antd";
-import TodoItemCard from "../components/common/TodoItemCard";
+import TodoItemCard from "../components/home/TodoItemCard";
 
 class Home extends React.Component{
 

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {todoItemReload, TODOITEMRELOAD} from "../../actions";
-import {Card, Icon} from "antd";
+import {Card, Icon,Checkbox, Row } from "antd";
 
 export function todoItemCardReducer(state={},action){
     switch (action.type) {
@@ -28,23 +28,54 @@ let cnt = 0;
 //刷新按钮触发
 function reload() {
     cnt++;
-    return [<p key={1}>{cnt} reload content</p>, <p key={2}>{cnt} reload content</p>, <p key={3}>{cnt} reload content</p>];
+    let item=[];
+    for(let i=0;i<3;i++){
+        item[i]={finish:false,content:i+" reload content"};
+    }
+    return item;
 }
 
 class TodoItemCard extends Component{
 
-    createDefaultContent(){
-        let result=[(<p key={1}>Card content</p>),<p key={2}>Card content</p>,<p key={3}>Card content</p>];
+    constructor(props){
+        super(props);
+        this.state={
+            items:[]
+        };
+    }
+
+    //当props发生变化时执行调用，线程安全，不会触发render
+    componentWillReceiveProps(nextProps, nextContext) {
+        this.setState({items:nextProps.todoItemData});
+    }
+
+    makeTodoItem(items){
+        if(items===undefined||items.length===0){
+            return(
+              <p>正在加载中</p>
+            );
+        }
+        let result=[];
+        for(let i=0;i<items.length;i++){
+            result[i]=(<Row key={i}>
+                <Checkbox key={i} value={i} onChange={this.checkboxOnChange.bind(this)}
+                          style={{"textDecoration":items[i].finish===true?"line-through":""}}>
+                    {cnt} {items[i].content}
+                </Checkbox>
+            </Row>)
+        }
         return result;
     }
 
-    componentDidMount(){
-        //this.props.todoItemReload();
-    };
-
+    checkboxOnChange(e){
+        //获取state中的items副本
+        let items=JSON.parse(JSON.stringify(this.state.items));
+        items[e.target.value].finish = e.target.checked;
+        this.setState({items:items});
+    }
 
     render(){
-        const content=this.props.todoItemData?this.props.todoItemData:this.createDefaultContent();
+        const content=this.makeTodoItem(this.state.items);
         return(
             <Card
                 title="待办事项"
@@ -56,6 +87,5 @@ class TodoItemCard extends Component{
             </Card>
         );
     }
-
 }
 export default connect(mapStateToProps,mapDispatchToProps)(TodoItemCard);

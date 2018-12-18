@@ -91,6 +91,10 @@ class TodoItemCard extends Component {
         //TODO 改造此处，将完成的事项上传到服务器
     }
 
+    addItem(e){
+        //TODO 改造此处，增加增加待办事项操作
+    }
+
     render() {
         const content = this.makeTodoItem(this.state.items);
         return (
@@ -98,7 +102,7 @@ class TodoItemCard extends Component {
                 title="待办事项"
                 extra={
                     <div >
-                        <a  style={{"float": "right","padding-left":"20px"}} href="#">
+                        <a  style={{"float": "right","padding-left":"20px"}} href="#" onClick={()=>this.addItem.bind(this)}>
                             <Icon type="plus"/>
                         </a>
                         <a  style={{"float": "right"}} href="#" onClick={() => this.props.todoItemReload()}>

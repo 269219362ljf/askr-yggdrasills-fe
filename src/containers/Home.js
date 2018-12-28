@@ -43,7 +43,6 @@ class Home extends React.Component{
                     </Col>
                 </Row>
                 <Row>
-
                 </Row>
             </div>
         );

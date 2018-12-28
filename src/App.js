@@ -9,7 +9,6 @@ import reducers from './reducers';
 import './App.css';
 import AppBreadcrumbRoute from "./components/layout/AppBreadcrumbRoute";
 
-
 const {Content, Sider,Footer} = Layout;
 
 function configureStore(initialState) {
@@ -62,7 +61,7 @@ class App extends Component {
                         </Layout>
                     </Layout>
                     <Footer style={{ textAlign: 'center' }}>
-                        prsonalWebSite ©2018 Created by lu
+                        personalWebSite ©2018 Created by lu
                     </Footer>
                 </Layout>
             </Provider>

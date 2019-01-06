@@ -61,7 +61,7 @@ class App extends Component {
                         </Layout>
                     </Layout>
                     <Footer style={{ textAlign: 'center' }}>
-                        personalWebSite ©2018 Created by lu
+                        personalWebSite ©2018 Created by lu All rights reserved (粤ICP备18158503号-1)
                     </Footer>
                 </Layout>
             </Provider>

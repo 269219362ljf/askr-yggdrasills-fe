@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:11-slim
 
 RUN mkdir -p /home/askr-yggdrasills-fe
 WORKDIR /home/askr-yggdrasills-fe
